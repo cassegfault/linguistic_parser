@@ -25,5 +25,9 @@ set(SOURCE_FILES
 	server/notifications.cpp
 	server/websocket_base.cpp)
 
+set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/lib)
+set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/lib)
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/build)
+
 add_executable(linguistic_parser ${SOURCE_FILES} /usr/local/lib/libchris.a /usr/local/lib/civetweb.o /usr/local/lib/CivetServer.o)
 target_link_libraries(linguistic_parser PRIVATE pthread dl ssl crypto boost_system boost_thread mysqlcppconn)
