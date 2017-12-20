@@ -1,2 +1,8 @@
 *.dat
 build/
+CMakeCache.txt
+wiktionary-english.json.zip
+CMakeFiles/
+Makefile
+cmake_install.cmake
+wiktionary-english.json
